@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Loin - Burger Lokal Terenak Indonesia</title>
+    <link rel="shortcut icon" href="../assets/Image/logo_burgerloin-removebg.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen - FULLY RESTORED -->
+    <div class="bl-loading-screen" id="blLoadingScreen">
+        <div class="bl-loading-container">
+            <div class="bl-loading-logo">
+                <img src="../assets/Image/logo_burgerloin-removebg.png" alt="Burger Loin Logo" class="bl-loading-logo-img">
+                <div class="bl-loading-logo-text">
+                    <h2 class="bl-loading-title">BURGER LOIN</h2>
+                    <span class="bl-loading-tagline">Burger Enak & Terjangkau</span>
+                </div>
+            </div>
+            <div class="bl-loading-spinner">
+                <div class="bl-spinner-ring bl-ring-1"></div>
+                <div class="bl-spinner-ring bl-ring-2"></div>
+                <div class="bl-spinner-ring bl-ring-3"></div>
+            </div>
+            <div class="bl-loading-text">
+                <p class="bl-loading-message">Menyiapkan menu terbaik untuk Anda...</p>
+                <div class="bl-loading-progress">
+                    <div class="bl-progress-bar"></div>
+                </div>
+            </div>
+            <div class="bl-slow-connection" id="blSlowConnection">
+                <i class="fas fa-wifi"></i>
+                <span>Koneksi lambat terdeteksi. Mohon tunggu sebentar...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Header - FIXED -->
+    <header class="mobile-header" id="mobileHeader">
+        <div class="mobile-header-content">
+            <div class="mobile-logo">
+                <img src="../assets/Image/logo_burgerloin-removebg.png" alt="Burger Loin" class="mobile-logo-img">
+                <div class="mobile-brand">
+                    <h3>BURGER LOIN</h3>
+                    <span>Burger Enak & Terjangkau</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Desktop Navbar -->
+    <nav class="navbar desktop-nav" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <img src="../assets/Image/logo_burgerloin-removebg.png" alt="Burger Loin Logo" class="logo-image">
+                    <div class="logo-text">
+                        <h2>BURGER LOIN</h2>
+                        <span class="tagline">Burger Enak & Terjangkau</span>
+                    </div>
+                </a>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu" class="nav-link">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">Tentang</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Kontak</a>
+                </li>
+                <li class="nav-item nav-cta">
+                    <a href="../halaman_pesan/pesan.html" class="nav-order-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Pesan Sekarang</span>
+                        <div class="btn-pulse"></div>
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Bottom Navigation - FIXED -->
+    <nav class="bottom-nav mobile-nav" id="bottomNav">
+        <div class="bottom-nav-container">
+            <a href="#home" class="bottom-nav-item active">
+                <div class="nav-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <span class="nav-label">Home</span>
+            </a>
+            
+            <a href="#menu" class="bottom-nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <span class="nav-label">Menu</span>
+            </a>
+            
+            <!-- Cart button with special styling -->
+            <a href="../halaman_pesan/pesan.html" class="bottom-nav-item cart-nav">
+                <div class="nav-icon cart-icon-wrapper">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <span class="nav-label">Pesan</span>
+            </a>
+            
+            <a href="#about" class="bottom-nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <span class="nav-label">Tentang</span>
+            </a>
+            
+            <!-- WhatsApp button -->
+            <a href="https://wa.me/6285162882540" class="bottom-nav-item whatsapp-nav" target="_blank">
+                <div class="nav-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <span class="nav-label">Chat</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Mobile Header Bar (Simple Logo Only) -->
+    <div class="mobile-header" id="mobileHeader">
+        <div class="mobile-header-content">
+            <div class="mobile-logo">
+                <img src="../assets/Image/logo_burgerloin-removebg.png" alt="Burger Loin" class="mobile-logo-img">
+                <div class="mobile-brand">
+                    <h3>BURGER LOIN</h3>
+                    <span>Burger Enak & Terjangkau</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Burger Lezat dari Gerobak Keliling</h1>
+                <p class="hero-description">Nikmati kelezatan burger segar dengan harga terjangkau. Dibuat dengan bahan berkualitas dan resep spesial yang sudah teruji.</p>
+                <div class="hero-slogan">
+                    <span class="hashtag">#BURGERLOKALINDONESIA</span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#menu" class="cta-button primary">Lihat Menu</a>
+                    <a href="#contact" class="cta-button secondary">Hubungi Kami</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Pelanggan Puas</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Fresh</span>
+                        <span class="stat-label">Bahan Segar</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Halal</span>
+                        <span class="stat-label">Terjamin</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="../assets/Image/Menu_buergerloin.png" alt="Burger Loin Menu" class="hero-burger-img">
+                    <div class="floating-badge">
+                        <span>Mulai 15k</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Menu Pilihan Kami</h2>
+                <p class="section-description">Berbagai varian burger lezat dengan harga yang terjangkau untuk semua kalangan</p>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <div class="menu-image-container">
+                        <img src="../assets/Image/chicken_burger.png" alt="Chicken Burger" class="menu-image">
+                        <div class="menu-image-overlay">
+                            <div class="price-badge">Rp 15.000</div>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <h3>Chicken Burger</h3>
+                        <p>Burger ayam crispy dengan sayuran segar dan saus spesial</p>
+                        <div class="menu-price">
+                            <span class="price">Rp 15.000</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-card popular">
+                    <div class="popular-badge">Populer</div>
+                    <div class="menu-image-container">
+                        <img src="../assets/Image/beef_burger.png" alt="Beef Burger" class="menu-image">
+                        <div class="menu-image-overlay">
+                            <div class="price-badge">Rp 20.000</div>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <h3>Beef Burger</h3>
+                        <p>Burger daging sapi juicy dengan keju dan saus BBQ</p>
+                        <div class="menu-price">
+                            <span class="price">Rp 20.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-image-container">
+                        <img src="../assets/Image/double_beef_burger.png" alt="Double Beef Burger" class="menu-image">
+                        <div class="menu-image-overlay">
+                            <div class="price-badge">Rp 30.000</div>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <h3>Double Beef Burger</h3>
+                        <p>Double patty daging sapi dengan keju dan sayuran lengkap</p>
+                        <div class="menu-price">
+                            <span class="price">Rp 30.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="extras-section">
+                <h3>Tambahan</h3>
+                <div class="extras-grid">
+                    <div class="extra-item">
+                        <i class="fas fa-cheese"></i>
+                        <span>+ Keju</span>
+                        <strong>Rp 5.000</strong>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-cta">
+                <a href="pesan.html" class="menu-order-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Pesan Menu Sekarang</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Tentang Burger Loin</h2>
+                    <p class="about-description">
+                        Burger Loin adalah usaha keluarga yang dimulai dari sebuah gerobak keliling kecil. 
+                        Kami berkomitmen menyajikan burger berkualitas dengan harga yang terjangkau untuk semua kalangan.
+                    </p>
+                    <div class="about-slogan">
+                        <span class="hashtag-about">#BURGERLOKALINDONESIA</span>
+                        <p class="slogan-description">Bangga menjadi bagian dari kuliner lokal Indonesia</p>
+                    </div>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Dibuat dengan Cinta</h4>
+                                <p>Setiap burger dibuat dengan penuh perhatian dan cinta untuk kepuasan pelanggan</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Bahan Segar</h4>
+                                <p>Menggunakan bahan-bahan segar dan berkualitas setiap harinya</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Harga Terjangkau</h4>
+                                <p>Kualitas premium dengan harga yang ramah di kantong</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-container">
+                        <video class="about-story-video" autoplay loop playsinline muted>
+                            <source src="../assets/burger_loin.mp4" type="video/mp4">
+                            <!-- Fallback image jika video tidak support -->
+                            <img src="../assets/Image/logo2_burgerloin.png" alt="Burger Loin Story" class="about-story-img">
+                        </video>
+                        
+                        <!-- Video Controls -->
+                        <div class="video-controls">
+                            <button class="play-pause-btn" onclick="toggleVideo()">
+                                <i class="fas fa-pause" id="playPauseIcon"></i>
+                            </button>
+                            <button class="mute-btn" onclick="toggleMute()">
+                                <i class="fas fa-volume-up" id="muteIcon"></i>
+                            </button>
+                        </div>
+                        
+                        <!-- Video overlay dengan informasi -->
+                        <div class="video-overlay">
+                            <div class="video-progress">
+                                <div class="progress-bar" id="progressBar"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Instagram Reels Style UI -->
+                        <div class="reels-ui">
+                            <div class="reels-info">
+                                <div class="reels-title">@burgerloin</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Testimoni Pelanggan</h2>
+                <p class="section-description">Lihat foto-foto dari pelanggan setia Burger Loin</p>
+            </div>
+            <div class="testimonial-gallery">
+                <div class="gallery-track" id="gallery-track">
+                    <div class="testimonial-image-card">
+                        <img src="../assets/Image/testimoni_1.png" alt="Testimoni 1" class="testimonial-img">
+                        <div class="image-overlay">
+                            <div class="customer-badge">
+                                <span>@sari_indah</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-image-card">
+                        <img src="../assets/Image/testimoni_2.png" alt="Testimoni 2" class="testimonial-img">
+                        <div class="image-overlay">
+                            <div class="customer-badge">
+                                <span>@andi_pratama</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-image-card">
+                        <img src="../assets/Image/testimoni_3.png" alt="Testimoni 3" class="testimonial-img">
+                        <div class="image-overlay">
+                            <div class="customer-badge">
+                                <span>@maya_family</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-image-card">
+                        <img src="../assets/Image/testimoni_4.png" alt="Testimoni 4" class="testimonial-img">
+                        <div class="image-overlay">
+                            <div class="customer-badge">
+                                <span>@dian_food</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-image-card">
+                        <img src="../assets/Image/testimoni_5.png" alt="Testimoni 5" class="testimonial-img">
+                        <div class="image-overlay">
+                            <div class="customer-badge">
+                                <span>@budi_driver</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-image-card">
+                        <img src="../assets/Image/testimoni_6.png" alt="Testimoni 6" class="testimonial-img">
+                        <div class="image-overlay">
+                            <div class="customer-badge">
+                                <span>@rizki_jakarta</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate slides for seamless loop -->
+                    <div class="testimonial-image-card">
+                        <img src="../assets/Image/testimoni_1.png" alt="Testimoni 1" class="testimonial-img">
+                        <div class="image-overlay">
+                            <div class="customer-badge">
+                                <span>@sari_indah</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-image-card">
+                        <img src="../assets/Image/testimoni_2.png" alt="Testimoni 2" class="testimonial-img">
+                        <div class="image-overlay">
+                            <div class="customer-badge">
+                                <span>@andi_pratama</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-image-card">
+                        <img src="../assets/Image/testimoni_3.png" alt="Testimoni 3" class="testimonial-img">
+                        <div class="image-overlay">
+                            <div class="customer-badge">
+                                <span>@maya_family</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Update Instagram CTA Section -->
+                <div class="instagram-cta">
+                    <div class="instagram-slogan">
+                        <span class="hashtag-instagram">#BURGERLOKALINDONESIA</span>
+                    </div>
+                    <p>Bagikan pengalaman Anda dengan tag <strong>@burgerloin</strong> dan <strong>#BURGERLOKALINDONESIA</strong></p>
+                    <a href="https://instagram.com/burgerloin" class="instagram-btn" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        Follow @burgerloin
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload Story Section - With Header and Content -->
+    <section class="upload-story" id="upload-story">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header">
+                <h2 class="section-title">🎉 UPLOAD STORY, DAPAT BURGER GRATIS! 🎉</h2>
+                <div class="upload-intro">
+                    <p class="intro-text">Kamu suka Burgerloin? Tunjukin di Instagram Story kamu!</p>
+                    <p class="intro-highlight">Upload momen seru kamu bareng burger favorit dari Burgerloin, dan dapatkan kesempatan menang <strong>Free Beef Burger</strong> setiap hari!</p>
+                </div>
+                <div class="upload-hashtag">
+                    <span class="hashtag-upload">#BURGERLOKALINDONESIA</span>
+                </div>
+            </div>
+
+            <!-- Poster Gallery - dengan loading states -->
+            <div class="upload-content">
+                <div class="upload-posters">
+                    <div class="poster-card">
+                        <div class="poster-image-container">
+                            <div class="image-loader" id="loader-1">
+                                <div class="spinner"></div>
+                            </div>
+                            <img src="../assets/Image/poster_3.png" alt="Poster 1" class="poster-img" 
+                                 onload="hideLoader('loader-1')" 
+                                 onerror="showPlaceholder(this, 'loader-1')"
+                                 style="opacity: 0; transition: opacity 0.3s ease;">
+                        </div>
+                    </div>
+
+                    <div class="poster-card">
+                        <div class="poster-image-container">
+                            <div class="image-loader" id="loader-2">
+                                <div class="spinner"></div>
+                            </div>
+                            <img src="../assets/Image/poster_2.png" alt="Poster 2" class="poster-img"
+                                 onload="hideLoader('loader-2')" 
+                                 onerror="showPlaceholder(this, 'loader-2')"
+                                 style="opacity: 0; transition: opacity 0.3s ease;">
+                        </div>
+                    </div>
+
+                    <div class="poster-card">
+                        <div class="poster-image-container">
+                            <div class="image-loader" id="loader-3">
+                                <div class="spinner"></div>
+                            </div>
+                            <img src="../assets/Image/poster_1.png" alt="Poster 3" class="poster-img"
+                                 onload="hideLoader('loader-3')" 
+                                 onerror="showPlaceholder(this, 'loader-3')"
+                                 style="opacity: 0; transition: opacity 0.3s ease;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="upload-cta-buttons">
+                <a href="https://www.instagram.com/p/DJlhULloW5o/?img_index=1" class="upload-btn instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    Ketuk disini untuk lihat selengkapnya
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section - FIXED WITH NEW CLASSES -->
+    <section id="contact" class="contact-section-new">
+        <div class="contact-container-new">
+            <div class="contact-header-new">
+                <h2 class="contact-title-new">Hubungi Kami</h2>
+                <p class="contact-description-new">Temukan lokasi kami atau hubungi untuk pemesanan</p>
+            </div>
+            
+            <div class="contact-wrapper-new">
+                <div class="contact-cards-new">
+                    <div class="info-card-new">
+                        <div class="info-icon-new">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content-new">
+                            <h3>Lokasi Kami</h3>
+                            <p>Senin-Jumat: Area Perkantoran Sudirman (11:00-15:00)</p>
+                            <p>Weekend: Taman Kota & Area Rekreasi (17:00-22:00)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card-new">
+                        <div class="info-icon-new">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-content-new">
+                            <h3>Pemesanan</h3>
+                            <p>WhatsApp: +62 813-4069-8852</p>
+                            <p>Telepon: +62 813-4069-8852</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card-new">
+                        <div class="info-icon-new">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content-new">
+                            <h3>Jam Operasional</h3>
+                            <p>Senin - Jumat: 11:00 - 15:00</p>
+                            <p>Sabtu - Minggu: 17:00 - 22:00</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card-new">
+                        <div class="info-icon-new">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="info-content-new">
+                            <h3>Follow Instagram</h3>
+                            <p>@burgerloin</p>
+                            <p>Lihat menu terbaru & promo menarik</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-actions-new">
+                    <div class="contact-buttons-new">
+                        <a href="https://wa.me/6281340698852" class="contact-btn-new contact-whatsapp-new" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Pesan via WhatsApp</span>
+                        </a>
+                        <a href="tel:+6281340698852" class="contact-btn-new contact-call-new">
+                            <i class="fas fa-phone"></i>
+                            <span>Telepon Sekarang</span>
+                        </a>
+                        <a href="https://instagram.com/burgerloin" class="contact-btn-new contact-instagram-new" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                            <span>Follow Instagram</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="../assets/Image/logo_burgerloin-removebg.png" alt="Burger Loin Logo" class="footer-logo-img">
+                        <div>
+                            <h3>BURGER LOIN</h3>
+                            <p class="brand-tagline">Burger Enak & Terjangkau</p>
+                            <span class="footer-hashtag">#BURGERLOKALINDONESIA</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Menyajikan burger berkualitas dengan harga terjangkau untuk semua kalangan. 
+                        Selalu siap melayani Anda dengan kelezatan terbaik.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li>Chicken Burger - 15k</li>
+                        <li>Beef Burger - 20k</li>
+                        <li>Double Beef Burger - 30k</li>
+                        <li>+ Keju - 5k</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i>  0888 4632 073</li>
+                        <li><i class="fab fa-whatsapp"></i> +62 813-4069-8852</li>
+                        <li><i class="fab fa-instagram"></i> @burgerloin</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Makassar, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Burger Loin. Burger Enak & Terjangkau untuk Semua.</p>
+                <p>Follow us: <a href="https://instagram.com/burgerloin" target="_blank">@burgerloin</a> | WhatsApp: <a href="https://wa.me/6281340698852" target="_blank">+62 813-4069-8852</a></p>
+                <div class="footer-slogan">
+                    <span class="hashtag-footer">#BURGERLOKALINDONESIA</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- CSS tetap sama seperti sebelumnya -->
+<style>
+/* Upload Story Section - Enhanced Design */
+.upload-story {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.upload-story::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23C22810" fill-opacity="0.03"><circle cx="30" cy="30" r="2"/></g></g></svg>');
+    animation: float 20s ease-in-out infinite;
+}
+
+.upload-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Enhanced Poster Cards */
+.upload-posters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin: 3rem 0;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.poster-card {
+    background: var(--bg-white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    border: 1px solid rgba(194, 40, 16, 0.1);
+}
+
+.poster-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.poster-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(194, 40, 16, 0.2);
+    border-color: var(--primary-color);
+}
+
+.poster-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* Enhanced Image Container */
+.poster-image-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.poster-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.6s ease;
+    filter: brightness(1.05) saturate(1.1);
+}
+
+.poster-card:hover .poster-img {
+    transform: scale(1.08);
+    filter: brightness(1.1) saturate(1.2);
+}
+
+/* Loading Spinner Enhancement */
+.image-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--bg-light), #f8f9fa);
+    z-index: 2;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(194, 40, 16, 0.1);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    position: relative;
+}
+
+.spinner::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0.3;
+    }
+    50% { 
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.7;
+    }
+}
+
+/* Image Overlay Effects */
+.poster-image-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        transparent 0%,
+        rgba(194, 40, 16, 0.05) 50%,
+        transparent 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.poster-card:hover .poster-image-container::after {
+    opacity: 1;
+}
+
+/* Add Badge to Poster Cards */
+.poster-card::after {
+    content: 'Poster Promo';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: var(--text-white);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 3;
+    box-shadow: 0 2px 10px rgba(194, 40, 16, 0.3);
+    transform: translateY(-5px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.poster-card:hover::after {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Enhanced CTA Button */
+.upload-cta-buttons {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.upload-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 36px;
+    background: linear-gradient(135deg, #E4405F, #FF6B8A);
+    color: var(--text-white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 8px 25px rgba(228, 64, 95, 0.3);
+    position: relative;
+    overflow: hidden;
+    border: none;
+    text-transform: none;
+}
+
+.upload-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s;
+}
+
+.upload-btn:hover::before {
+    left: 100%;
+}
+
+.upload-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(228, 64, 95, 0.4);
+    background: linear-gradient(135deg, #FF6B8A, #E4405F);
+}
+
+.upload-btn:active {
+    transform: translateY(-1px) scale(1.02);
+    transition: all 0.1s ease;
+}
+
+.upload-btn i {
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+}
+
+.upload-btn:hover i {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .upload-posters {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 2rem 0;
+        padding: 0 1rem;
+    }
+    
+    .poster-card {
+        margin: 0 auto;
+        max-width: 350px;
+    }
+    
+    .poster-image-container {
+        height: 300px;
+    }
+    
+    .poster-card:hover {
+        transform: translateY(-8px) scale(1.01);
+    }
+    
+    .upload-btn {
+        padding: 16px 28px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .poster-image-container {
+        height: 250px;
+    }
+    
+    .poster-card {
+        border-radius: 15px;
+    }
+    
+    .upload-btn {
+        padding: 14px 24px;
+        font-size: 0.9rem;
+        width: 90%;
+        justify-content: center;
+    }
+}
+
+/* Error/Placeholder Styling */
+.poster-img[style*="display: none"] + .image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--bg-light), #f8f9fa);
+    color: var(--text-light);
+    font-size: 1.2rem;
+}
+
+.image-placeholder {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+.image-placeholder i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    opacity: 0.5;
+}
+
+/* Animation for poster cards */
+.poster-card {
+    animation: fadeInUp 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.poster-card:nth-child(1) { animation-delay: 0.1s; }
+.poster-card:nth-child(2) { animation-delay: 0.2s; }
+.poster-card:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* High-resolution display support */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .poster-img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Intersection Observer Animation Classes */
+.poster-card.animate-in {
+    animation: slideInScale 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes slideInScale {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Enhanced loading state */
+.poster-card.loading .poster-image-container {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Gerobak Section */
+.gerobak-section {
+    background-color: #f4f4f9;
+    padding: 5rem 0;
+}
+
+.gerobak-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.gerobak-images {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.gerobak-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+}
+
+.gerobak-card:hover {
+    transform: translateY(-8px);
+}
+
+.gerobak-image-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.gerobak-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+.gerobak-card:hover .gerobak-img {
+    transform: scale(1.1);
+}
+
+.gerobak-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.gerobak-card:hover .gerobak-overlay {
+    opacity: 1;
+}
+
+.gerobak-info {
+    color: #fff;
+    text-align: center;
+}
+
+.gerobak-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.gerobak-info p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.gerobak-gallery {
+    display: flex;
+    gap: 1rem;
+}
+
+.gerobak-mini-card {
+    flex: 1;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.mini-gerobak-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+.gerobak-mini-card:hover .mini-gerobak-img {
+    transform: scale(1.05);
+}
+
+.mini-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+/* Responsive Styles for Gerobak Section */
+@media (max-width: 768px) {
+    .gerobak-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .gerobak-images {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .gerobak-card {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .gerobak-image-container {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gerobak-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .gerobak-info p {
+        font-size: 0.9rem;
+    }
+    
+    .mini-caption {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+</style>

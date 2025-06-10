@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Sekarang - Burger Loin | Burger Enak & Terjangkau</title>
+    <meta name="description" content="Pesan burger lezat dari Burger Loin. Pilih ambil di tempat atau delivery dengan mudah dan cepat.">
+    <link rel="shortcut icon" href="../assets/Image/logo_burgerloin-removebg.png" type="image/png">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./pesan.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-container">
+            <div class="burger-spinner">🍔</div>
+            <div class="loading-text">BURGER LOIN</div>
+            <div class="loading-subtitle">Menyiapkan menu terbaik untuk Anda...</div>
+        </div>
+    </div>
+
+    <!-- Navbar Desktop -->
+    <nav class="navbar desktop-nav" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../halaman_utama/index.html" class="logo-link">
+                    <img src="../assets/Image/logo_burgerloin-removebg.png" alt="Burger Loin Logo" class="logo-image">
+                    <div class="logo-text">
+                        <h2>BURGER LOIN</h2>
+                        <span class="tagline">Burger Enak & Terjangkau</span>
+                    </div>
+                </a>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="../halaman_utama/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../halaman_utama/index.html#menu" class="nav-link">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../halaman_utama/index.html#about" class="nav-link">Tentang</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../halaman_utama/index.html#contact" class="nav-link">Kontak</a>
+                </li>
+                <li class="nav-item nav-cta">
+                    <a href="#cart-section" class="nav-order-btn" id="navCartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Lihat Keranjang</span>
+                        <span class="cart-badge" id="navCartBadge" style="display: none;">0</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="bottom-nav mobile-nav" id="bottomNav">
+        <div class="bottom-nav-container">
+            <a href="../halaman_utama/index.html" class="bottom-nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <span class="nav-label">Home</span>
+            </a>
+            
+            <a href="../halaman_utama/index.html#menu" class="bottom-nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <span class="nav-label">Menu</span>
+            </a>
+            
+            <a href="#cart-section" class="bottom-nav-item cart-nav" id="mobileCartBtn">
+                <div class="nav-icon cart-icon-wrapper">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="mobile-cart-badge" id="mobileCartBadge" style="display: none;">0</span>
+                </div>
+                <span class="nav-label">Keranjang</span>
+            </a>
+            
+            <a href="../halaman_utama/index.html#about" class="bottom-nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <span class="nav-label">Tentang</span>
+            </a>
+            
+            <a href="https://wa.me/6281340698852" class="bottom-nav-item whatsapp-nav" target="_blank">
+                <div class="nav-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <span class="nav-label">WhatsApp</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Mobile Header Bar (Simple Logo Only) -->
+    <div class="mobile-header" id="mobileHeader">
+        <div class="mobile-header-content">
+            <div class="mobile-logo">
+                <img src="../assets/Image/logo_burgerloin-removebg.png" alt="Burger Loin" class="mobile-logo-img">
+                <div class="mobile-brand">
+                    <h3>BURGER LOIN</h3>
+                    <span>Burger Enak & Terjangkau</span>
+                </div>
+            </div>
+            <div class="mobile-order-status" id="mobileOrderStatus" style="display: none;">
+                <div class="order-status-content">
+                    <span class="status-text">Sedang memesan</span>
+                    <div class="status-indicator"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="order-hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-bg-overlay"></div>
+            <div class="hero-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-fire"></i>
+                <span>Hot Deal!</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-highlight">Pesan Burger Loin</span>
+                <span class="title-main">Sekarang!</span>
+            </h1>
+            <p class="hero-subtitle">
+                <i class="fas fa-star"></i>
+                Pilih cara terbaik untuk menikmati burger favorit Anda
+                <i class="fas fa-star"></i>
+            </p>
+            <div class="hero-features">
+                <div class="feature-tag">
+                    <i class="fas fa-leaf"></i>
+                    <span>Bahan Segar</span>
+                </div>
+                <div class="feature-tag">
+                    <i class="fas fa-clock"></i>
+                    <span>Cepat & Mudah</span>
+                </div>
+                <div class="feature-tag">
+                    <i class="fas fa-heart"></i>
+                    <span>Rasa Istimewa</span>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <button class="btn-hero pickup" onclick="selectOrderType('pickup')">
+                    <div class="btn-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="btn-content">
+                        <span class="btn-title">Ambil di Tempat</span>
+                        <span class="btn-subtitle">Tanpa ongkir • Lebih cepat</span>
+                    </div>
+                    <div class="btn-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </button>
+                <button class="btn-hero delivery" onclick="selectOrderType('delivery')">
+                    <div class="btn-icon">
+                        <i class="fas fa-motorcycle"></i>
+                    </div>
+                    <div class="btn-content">
+                        <span class="btn-title">Diantarkan</span>
+                        <span class="btn-subtitle">Gratis ongkir Sudiang • Nyaman</span>
+                    </div>
+                    <div class="btn-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Pelanggan Puas</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">4.8★</div>
+                    <div class="stat-label">Rating Burger</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">30 Menit</div>
+                    <div class="stat-label">Delivery Time</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Details Section -->
+    <section class="order-details" id="order-details" style="display: none;">
+        <div class="container">
+            <div class="order-type-info">
+                <div class="order-type-card" id="orderTypeCard">
+                    <div class="order-type-icon" id="orderTypeIcon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h2 class="order-type-title" id="orderTypeTitle">Ambil di Tempat</h2>
+                    <p class="order-type-description" id="orderTypeDescription">
+                        Datang langsung ke gerobak kami dan nikmati burger segar yang baru saja dimasak
+                    </p>
+                    
+                    <!-- Benefits -->
+                    <div class="order-benefits" id="orderBenefits">
+                        <!-- Benefits akan diisi via JavaScript -->
+                    </div>
+                    
+                    <button class="btn-continue" onclick="showMenu()">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>Lanjut Pilih Menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu-section" id="menu-section" style="display: none;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pilih Menu Favorit</h2>
+                <p>Menu burger segar dan berkualitas untuk Anda</p>
+            </div>
+            
+            <div class="menu-grid" id="menuGrid">
+                <!-- Menu Chicken Burger -->
+                <div class="menu-item" data-id="chicken-burger">
+                    <div class="menu-image-container">
+                        <img src="../assets/Image/chicken_burger.png" alt="Chicken Burger" class="menu-image">
+                        <div class="menu-badge">Populer</div>
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-title">Chicken Burger</h3>
+                        <p class="menu-description">Burger ayam crispy dengan saus spesial, selada, dan tomat segar</p>
+                        <div class="menu-footer">
+                            <span class="menu-price">Rp 15.000</span>
+                            <div class="quantity-controls">
+                                <button class="qty-btn" onclick="updateQuantity('chicken-burger', -1)">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <span class="quantity" id="qty-chicken-burger">0</span>
+                                <button class="qty-btn" onclick="updateQuantity('chicken-burger', 1)">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Beef Burger -->
+                <div class="menu-item" data-id="beef-burger">
+                    <div class="menu-image-container">
+                        <img src="../assets/Image/beef_burger.png" alt="Beef Burger" class="menu-image" onerror="this.src='../assets/Image/placeholder.jpg'">
+                        <div class="menu-badge">Best Seller</div>
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-title">Beef Burger</h3>
+                        <p class="menu-description">Burger daging sapi juicy dengan bumbu rahasia dan sayuran segar</p>
+                        <div class="menu-footer">
+                            <span class="menu-price">Rp 20.000</span>
+                            <div class="quantity-controls">
+                                <button class="qty-btn" onclick="updateQuantity('beef-burger', -1)">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <span class="quantity" id="qty-beef-burger">0</span>
+                                <button class="qty-btn" onclick="updateQuantity('beef-burger', 1)">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Double Beef Burger -->
+                <div class="menu-item" data-id="double-beef-burger">
+                    <div class="menu-image-container">
+                        <img src="../assets/Image/double_beef_burger.png" alt="Double Beef Burger" class="menu-image" onerror="this.src='../assets/Image/placeholder.jpg'">
+                        <div class="menu-badge">Premium</div>
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-title">Double Beef Burger</h3>
+                        <p class="menu-description">Double patty daging sapi dengan keju melted dan saus BBQ spesial</p>
+                        <div class="menu-footer">
+                            <span class="menu-price">Rp 30.000</span>
+                            <div class="quantity-controls">
+                                <button class="qty-btn" onclick="updateQuantity('double-beef-burger', -1)">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <span class="quantity" id="qty-double-beef-burger">0</span>
+                                <button class="qty-btn" onclick="updateQuantity('double-beef-burger', 1)">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Chicken Burger + Keju -->
+                <div class="menu-item" data-id="chicken-burger-cheese">
+                    <div class="menu-image-container">
+                        <img src="../assets/Image/chicken_burger.png" alt="Chicken Burger + Keju" class="menu-image" onerror="this.src='../assets/Image/chicken_burger.png'">
+                        <div class="menu-badge cheese-badge">
+                            <i class="fas fa-cheese"></i>
+                            Dengan Keju
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-title">Chicken Burger + Keju</h3>
+                        <p class="menu-description">Burger ayam crispy dengan extra keju melted, saus spesial, selada, dan tomat segar</p>
+                        <div class="menu-footer">
+                            <span class="menu-price">Rp 20.000</span>
+                            <div class="quantity-controls">
+                                <button class="qty-btn" onclick="updateQuantity('chicken-burger-cheese', -1)">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <span class="quantity" id="qty-chicken-burger-cheese">0</span>
+                                <button class="qty-btn" onclick="updateQuantity('chicken-burger-cheese', 1)">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Cheese Included Info -->
+                        <div class="cheese-included">
+                            <div class="cheese-info">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Sudah termasuk keju melted</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Beef Burger + Keju -->
+                <div class="menu-item" data-id="beef-burger-cheese">
+                    <div class="menu-image-container">
+                        <img src="../assets/Image/beef_burger.png" alt="Beef Burger + Keju" class="menu-image" onerror="this.src='../assets/Image/beef_burger.png'">
+                        <div class="menu-badge cheese-badge">
+                            <i class="fas fa-cheese"></i>
+                            Dengan Keju
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-title">Beef Burger + Keju</h3>
+                        <p class="menu-description">Burger daging sapi juicy dengan keju cheddar melted, bumbu rahasia dan sayuran segar</p>
+                        <div class="menu-footer">
+                            <span class="menu-price">Rp 25.000</span>
+                            <div class="quantity-controls">
+                                <button class="qty-btn" onclick="updateQuantity('beef-burger-cheese', -1)">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <span class="quantity" id="qty-beef-burger-cheese">0</span>
+                                <button class="qty-btn" onclick="updateQuantity('beef-burger-cheese', 1)">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Cheese Included Info -->
+                        <div class="cheese-included">
+                            <div class="cheese-info">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Sudah termasuk keju cheddar</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Double Beef Burger + Extra Keju -->
+                <div class="menu-item" data-id="double-beef-burger-extra-cheese">
+                    <div class="menu-image-container">
+                        <img src="../assets/Image/double_beef_burger.png" alt="Double Beef + Extra Keju" class="menu-image" onerror="this.src='../assets/Image/double_beef_burger.png'">
+                        <div class="menu-badge cheese-badge premium">
+                            <i class="fas fa-crown"></i>
+                            Premium Cheese
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-title">Double Beef + Extra Keju</h3>
+                        <p class="menu-description">Double patty daging sapi dengan double keju melted, saus BBQ spesial dan sayuran premium</p>
+                        <div class="menu-footer">
+                            <span class="menu-price">Rp 35.000</span>
+                            <div class="quantity-controls">
+                                <button class="qty-btn" onclick="updateQuantity('double-beef-burger-extra-cheese', -1)">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <span class="quantity" id="qty-double-beef-burger-extra-cheese">0</span>
+                                <button class="qty-btn" onclick="updateQuantity('double-beef-burger-extra-cheese', 1)">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Cheese Included Info -->
+                        <div class="cheese-included premium">
+                            <div class="cheese-info">
+                                <i class="fas fa-star"></i>
+                                <span>Sudah termasuk double keju premium</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section class="cart-section" id="cart-section" style="display: none;">
+        <div class="container">
+            <div class="cart-wrapper">
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <h3>
+                        <i class="fas fa-shopping-cart"></i>
+                        Keranjang Belanja
+                    </h3>
+                    
+                    <div id="cart-items">
+                        <div class="empty-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <p>Keranjang masih kosong</p>
+                            <span>Pilih menu di atas untuk mulai memesan</span>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-total" id="cart-total" style="display: none;">
+                        <div class="total-row subtotal">
+                            <span>Subtotal:</span>
+                            <span id="subtotal-amount">Rp 0</span>
+                        </div>
+                        <div class="total-row delivery" id="delivery-row" style="display: none;">
+                            <span>Ongkir:</span>
+                            <span id="delivery-amount">Rp 0</span>
+                        </div>
+                        <div class="delivery-note" id="delivery-note" style="display: none;">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Pilih kecamatan untuk melihat ongkos kirim</span>
+                        </div>
+                        <div class="total-row final">
+                            <span><strong>Total:</strong></span>
+                            <span id="final-total"><strong>Rp 0</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Form -->
+                <div class="order-form" id="order-form" style="display: none;">
+                    <!-- Pickup Form -->
+                    <form id="pickup-form" style="display: none;">
+                        <h3>
+                            <i class="fas fa-store"></i>
+                            Detail Pengambilan
+                        </h3>
+                        
+                        <div class="form-group">
+                            <label for="pickup-name">Nama Lengkap *</label>
+                            <input type="text" id="pickup-name" name="name" required placeholder="Nama untuk pickup order">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pickup-phone">Nomor WhatsApp *</label>
+                            <input type="tel" id="pickup-phone" name="phone" required placeholder="08xxxxxxxxxx">
+                        </div>
+                        
+                        <div class="pickup-location">
+                            <h4><i class="fas fa-map-marker-alt"></i> Lokasi Gerobak Hari Ini</h4>
+                            <div class="location-card">
+                                <div class="location-info">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Jl. Perintis Kemerdekaan, Makassar</span>
+                                </div>
+                                <div class="location-address">
+                                    <i class="fas fa-navigation"></i>
+                                    <span>Depan Universitas Hasanuddin (11.00-20.00)</span>
+                                </div>
+                                <button type="button" class="btn-maps" onclick="openMaps()">
+                                    <i class="fas fa-directions"></i>
+                                    Lihat di Maps
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pickup-notes">Catatan (Opsional)</label>
+                            <textarea id="pickup-notes" name="notes" placeholder="Catatan khusus untuk pesanan Anda"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-order">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Pesan Sekarang</span>
+                        </button>
+                    </form>
+
+                    <!-- Delivery Form -->
+                    <form id="delivery-form" style="display: none;">
+                        <h3>
+                            <i class="fas fa-motorcycle"></i>
+                            Detail Pengiriman
+                        </h3>
+                        
+                        <div class="form-group">
+                            <label for="delivery-name">Nama Lengkap *</label>
+                            <input type="text" id="delivery-name" name="name" required placeholder="Nama penerima">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="delivery-phone">Nomor WhatsApp *</label>
+                            <input type="tel" id="delivery-phone" name="phone" required placeholder="08xxxxxxxxxx">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="delivery-address">Alamat Lengkap *</label>
+                            <textarea id="delivery-address" name="address" required placeholder="Jalan, No. Rumah, RT/RW, Kelurahan"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="delivery-district">Kecamatan *</label>
+                            <select id="delivery-district" name="district" required>
+                                <option value="">Pilih Kecamatan</option>
+                                <option value="biringkanaya">Biringkanaya (Sudiang) - GRATIS</option>
+                                <option value="tamalanrea">Tamalanrea - Rp 8.000</option>
+                                <option value="manggala">Manggala - Rp 10.000</option>
+                                <option value="panakkukang">Panakkukang - Rp 12.000</option>
+                                <option value="rappocini">Rappocini - Rp 15.000</option>
+                                <option value="makassar">Makassar - Rp 10.000</option>
+                            </select>
+                        </div>
+                        
+                        <div class="delivery-priority-info">
+                            <div class="priority-header">
+                                <i class="fas fa-star"></i>
+                                <h4>Area Prioritas Sudiang</h4>
+                            </div>
+                            <div class="priority-content">
+                                <div class="priority-item highlight">
+                                    <i class="fas fa-gift"></i>
+                                    <div class="priority-details">
+                                        <strong>Gratis Ongkir</strong>
+                                        <span>Untuk area Sudiang dan sekitarnya</span>
+                                    </div>
+                                    <div class="priority-badge">FREE</div>
+                                </div>
+                            </div>
+                            <div class="priority-note">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Ongkir gratis berlaku untuk pembelian minimal Rp 15.000</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="delivery-notes">Catatan (Opsional)</label>
+                            <textarea id="delivery-notes" name="notes" placeholder="Patokan alamat atau catatan khusus"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-order">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Pesan Sekarang</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Cart -->
+    <div class="floating-cart" id="floating-cart" style="display: none;">
+        <div class="cart-summary-mini">
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cart-count">0</span>
+            </div>
+            <div class="cart-info">
+                <div class="cart-items-count" id="cart-items-count">0 item</div>
+                <div class="cart-total-mini" id="cart-total-mini">Rp 0</div>
+            </div>
+        </div>
+        <button class="cart-button" onclick="scrollToCart()">
+            <i class="fas fa-eye"></i>
+            Lihat Keranjang
+        </button>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="success-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="success-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h3>Pesanan Berhasil!</h3>
+                <p>Terima kasih! Pesanan Anda telah diterima dan akan segera diproses.</p>
+            </div>
+            
+            <div class="order-summary-modal">
+                <div class="order-id">
+                    <strong>No. Pesanan: <span id="modal-order-id">-</span></strong>
+                </div>
+                <div class="order-total-modal">
+                    <strong>Total: <span id="modal-order-total">Rp 0</span></strong>
+                </div>
+            </div>
+            
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeModal()">Tutup</button>
+                <button class="btn-primary" onclick="newOrder()">Pesan Lagi</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer - Simplified Version -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Main Footer Content -->
+            <div class="footer-main">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="../assets/Image/logo_burgerloin-removebg.png" alt="Burger Loin Logo" class="footer-logo-img">
+                        <div class="brand-info">
+                            <h3>BURGER LOIN</h3>
+                            <p>Burger Enak & Terjangkau</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Menyajikan burger berkualitas dengan harga terjangkau untuk semua kalangan di area Sudiang, Makassar.
+                    </p>
+                </div>
+
+                <!-- Quick Info -->
+                <div class="footer-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Sudiang, Makassar</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>11.00 - 20.00 WITA</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>+62 813-4069-8852</span>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <a href="../halaman_utama/index.html">Beranda</a>
+                    <a href="../halaman_utama/index.html">Menu</a>
+                    <a href="../halaman_utama/index.html">Tentang</a>
+                    <a href="../halaman_utama/index.html">Kontak</a>
+                </div>
+
+                <!-- Social Links -->
+                <div class="footer-social">
+                    <a href="https://wa.me/6281340698852" class="social-btn whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="https://instagram.com/burgerloin" class="social-btn instagram" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Special Offer Banner -->
+            <div class="footer-offer">
+                <div class="offer-content">
+                    <i class="fas fa-gift"></i>
+                    <div class="offer-text">
+                        <strong>Gratis Ongkir Sudiang!</strong>
+                        <span>Untuk pembelian minimal Rp 15.000</span>
+                    </div>
+                    <a href="pesan.html" class="offer-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Pesan Sekarang
+                    </a>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 Burger Loin. Semua hak cipta dilindungi.</p>
+                <p class="footer-made">Dibuat dengan <i class="fas fa-heart"></i> untuk pecinta burger Indonesia</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+        <div class="back-to-top-tooltip">Kembali ke atas</div>
+    </button>
+
+    <!-- Alternative: Burger-themed Button -->
+    <!-- 
+    <button class="back-to-top-burger" id="backToTop" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    -->
+
+    <!-- Alternative: Enhanced with Progress Ring -->
+    <!-- 
+    <button class="back-to-top-enhanced" id="backToTop" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+        <div class="back-to-top-tooltip">Kembali ke atas</div>
+    </button>
+    -->
+
+    <!-- Scripts -->
+    <script src="./pesan.js"></script>
+</body>
+</html>
