@@ -1,0 +1,13 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/halaman_utama/index.html"
+    },
+    {
+      "source": "/pesan",
+      "destination": "/halaman_pesan/pesan.html"
+    }
+  ]
+}
